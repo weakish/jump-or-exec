@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jump-or-exec by weakish</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/weakish/jump-or-exec">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/weakish/jump-or-exec/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/weakish/jump-or-exec/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Jump-or-exec</h1>
+          <p>shell script to jump or exec an application under X window manager</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/weakish">weakish</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p><code>jump-or-exec</code> tries to see if an application is already running, and if so, bring the application's window to the front, otherwise launch an instance.
+Bind it to a shortcut key and it will be useful!</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-source-shell"><pre>jump-or-exec <span class="pl-c1">command</span> [window_name]</pre></div>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
+
+<p>This script is written in <code>sh</code>.
+You just need to download <code>jump-or-exec.sh</code>, and put it into your <code>$PATH</code>,
+probably after renaming to <code>jump-or-exec</code> and <code>chomd a+x</code>.</p>
+
+<h2>
+<a id="see-also" class="anchor" href="#see-also" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>See also</h2>
+
+<p>This script uses <a href="http://tomas.styblo.name/wmctrl/">wmctrl</a>, which is a UNIX/Linux command line tool to interact with an EWMH/NetWM compatible X Window Manager.</p>
+
+<p>This script is based on the version in <a href="https://github.com/eshock/.bashrc.d/blob/master/tools/jump-or-exec">eshock/.bashrc.d</a>, in which <code>window_name</code> cannot be omitted.</p>
+
+<p>There are also other scripts based on wmctrl, for example, <a href="https://github.com/mkropat/jumpapp">jumpapp</a> and <a href="https://github.com/dmikalova/brocket">brocket</a>.
+Both are more complex^w feature rich.
+And I failed to make them work with some applications.
+Thus I wrote this script.</p>
+
+<p>Besides wmctrl, it is also possible to implement <code>jump or exec</code> in Xlib directly.
+For example, here is <a href="http://www.aifreedom.com/pluskid/JumpOrExec.html">a Python script</a>.
+The script runs as a daemon, to avoid possible delays when invoking shell script and wmctrl.
+The post is written in Chinese, but don't worry, you can read code in Python and code comments in English.
+On my machine, <code>wmctrl</code> is fast enough.
+Thus I consider I don't need a persistent daemon.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
