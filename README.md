@@ -8,14 +8,28 @@ jump-or-exec command [window_name]
 ```
 
 ## Install
-This script is written in `sh`.
+
+### Dependencies
+
+This script uses [wmctrl](http://tomas.styblo.name/wmctrl/), which is a UNIX/Linux command line tool to interact with an EWMH/NetWM compatible X Window Manager.
+
+### via basher
+
+```sh
+; basher install weakish/jump-or-exec
+```
+
+Require [basher][] version: `>=39875bc`.
+
+[basher]: https://github.com/basherpm/basher
+
+### manually
+
 You just need to download `jump-or-exec.sh`, and put it into your `$PATH`,
 probably after renaming to `jump-or-exec` and `chomd a+x`.
 
+
 ## See also
-
-
-This script uses [wmctrl](http://tomas.styblo.name/wmctrl/), which is a UNIX/Linux command line tool to interact with an EWMH/NetWM compatible X Window Manager.
 
 This script is based on the version in [eshock/.bashrc.d](https://github.com/eshock/.bashrc.d/blob/master/tools/jump-or-exec), in which `window_name` cannot be omitted.
 
